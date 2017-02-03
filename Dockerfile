@@ -1,4 +1,4 @@
-FROM 121.40.145.76:4567/docker/python:v2.7-alpine
+FROM 121.40.145.76:4567/docker/python:v2.7.13-alpine
 
 MAINTAINER LiXin "1045909037@qq.com"
 
