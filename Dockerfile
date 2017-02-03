@@ -1,6 +1,6 @@
 FROM 121.40.145.76:4567/docker/python:v2.7.13-alpine
 
-MAINTAINER LiXin "1045909037@qq.com"
+MAINTAINER Li Xin "1045909037@qq.com"
 
 WORKDIR /srv
 
