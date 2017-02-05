@@ -2,8 +2,6 @@
 
 set -eo pipefail
 
-cd /srv/spider
-touch aaa
-# scrapy startproject /srv/crawler
+scrapy startproject crawl /srv/crawl
 
 exec "$@"
