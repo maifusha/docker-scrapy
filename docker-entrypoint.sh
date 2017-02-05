@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
-scrapy startproject crawl /srv/crawl
+if [ ! -d "/srv/crawl/crawl" ]; then
+  scrapy startproject crawl /srv/crawl
+fi
 
 exec "$@"
