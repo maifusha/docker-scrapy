@@ -10,7 +10,7 @@
 ### 使用(项目根目录下操作)
 ```bash
 # 初始化开发环境
-docker run -d -v $(pwd):/srv/crawl --name=${PWD##*/} 121.40.145.76:4567/docker/scrapy:latest
+docker run -d -v .:/srv/crawl --name=${PWD##*/} 121.40.145.76:4567/docker/scrapy:latest
 
 # 爬虫新建蜘蛛
 docker exec -d ${PWD##*/} scrapy genspider --template basic /srv/crawl/crawl/spiders/蜘蛛名字 抓取域名
