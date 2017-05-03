@@ -15,10 +15,6 @@ RUN pip install --no-cache-dir \
                     scrapy==1.3.0 \
                     PyMySQL==0.7.9
 
-RUN scrapy startproject crawl /srv/crawl
-
-VOLUME ['/srv/crawl']
-
 WORKDIR /srv/crawl
 
 CMD ['scrapy', 'shell']
