@@ -1,8 +1,6 @@
-FROM 121.40.145.76:4567/docker/python:v2.7.13-alpine
+FROM 121.40.145.76:4567/docker/python:latest
 
-MAINTAINER Li Xin "1045909037@qq.com"
-
-WORKDIR /srv
+MAINTAINER edgar.li "1045909037@qq.com"
 
 RUN apk add --no-cache \
               gcc \
@@ -17,8 +15,10 @@ RUN pip install --no-cache-dir \
                     scrapy==1.3.0 \
                     PyMySQL==0.7.9
 
-COPY docker-entrypoint.sh /entrypoint.sh
+RUN scrapy startproject crawl /srv/crawl
 
-ENTRYPOINT ["/entrypoint.sh"]
+VOLUME ['/srv/crawl']
 
-CMD ["scrapy", 'shell']
+WORKDIR /srv/crawl
+
+CMD ['scrapy', 'shell', '--nolog']

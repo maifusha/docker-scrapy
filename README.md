@@ -1,23 +1,19 @@
-# Docker image for Scrapy
+> Docker image for Scrapy
 
-[![build status](https://121.40.145.76/docker/scrapy/badges/master/build.svg)](https://121.40.145.76/docker/scrapy/commits/master)
+[![build status](https://121.40.145.76:8443/docker/scrapy/badges/master/build.svg)](https://121.40.145.76:8443/docker/scrapy/commits/master)
 
-**关于本镜像**
-* 集成Scrapy==1.3.0  
-* 集成PyMySQL==0.7.9  
-* 容器将以当前目录为名 ${PWD##*/}
 
-### 使用(项目根目录下操作)
-```bash
-# 初始化开发环境
-docker run -d -v .:/srv/crawl --name=${PWD##*/} 121.40.145.76:4567/docker/scrapy:latest
+** 关于本镜像 **
+* 集成Scrapy==1.3.0
+* 集成PyMySQL==0.7.9
 
-# 爬虫新建蜘蛛
-docker exec -d ${PWD##*/} scrapy genspider --template basic /srv/crawl/crawl/spiders/蜘蛛名字 抓取域名
 
-# 爬虫启动蜘蛛
-docker exec -d ${PWD##*/} scrapy crawl /srv/crawl/crawl/spiders/蜘蛛名字
-
-# 实时监控抓取状态
-docker logs ${PWD##*/}
+** 爬虫项目根目录下 - 使用操作 **
+1.执行`docker run -d -v .:/srv/crawl --name=${PWD##*/} 121.40.145.76:4567/docker/scrapy:latest`启动`Scrapy`容器环境（容器将以当前目录为名）
+2.执行`docker exec -it ${PWD##*/} sh`进入`Scrapy`环境管理蜘蛛（退出容器请按键`CTRL + d`）：
 ```
+    scrapy genspider --template basic 蜘蛛名字 爬取地址  #新建蜘蛛
+    scrapy shell --nolog 爬取地址  #进入ScrapyShell进行调试
+    scrapy crawl 蜘蛛名字  #启动蜘蛛开始爬取
+```
+3.执行`docker logs ${PWD##*/}`实时监控爬虫抓取状态
