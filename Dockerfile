@@ -21,4 +21,4 @@ VOLUME ['/srv/crawl']
 
 WORKDIR /srv/crawl
 
-CMD ['scrapy', 'shell', '--nolog']
+CMD ['scrapy', 'shell']
