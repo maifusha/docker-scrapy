@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir \
 
 WORKDIR /srv/crawl
 
-CMD ['scrapy', 'shell']
+CMD ["tail", "-f", "/dev/stderr"]
