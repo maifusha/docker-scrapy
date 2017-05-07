@@ -13,6 +13,7 @@ RUN apk add --no-cache \
              
 RUN pip install --no-cache-dir \
                     scrapy==1.3.0 \
+                    #scrapy-jsonrpc== \
                     PyMySQL==0.7.9
 
 WORKDIR /srv/crawl
