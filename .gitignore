@@ -1,5 +1,2 @@
-docker-compose.yml
-/vendor
+/.idea
 .DS_Store
-.env
-.idea
