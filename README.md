@@ -1,6 +1,6 @@
 > Docker image for Scrapy
 
-[![build status](https://121.40.145.76:8443/docker/scrapy/badges/master/build.svg)](https://121.40.145.76:8443/docker/scrapy/commits/master)
+[![build status](https://git.maifusha.com/docker/scrapy/badges/master/build.svg)](https://git.maifusha.com/docker/scrapy/commits/master)
 
 
 #### 关于本镜像
@@ -9,7 +9,7 @@
 
 
 #### 爬虫项目操作
-1. 执行`docker run -d -v .:/srv/crawl --name=${PWD##*/} 121.40.145.76:4567/docker/scrapy:latest`启动`Scrapy`容器环境（容器将以当前目录为名）
+1. 执行`docker run -d -v .:/srv/crawl --name=${PWD##*/} git.maifusha.com:5005/docker/scrapy:latest`启动`Scrapy`容器环境（容器将以当前目录为名）
 2. 执行`docker exec -it ${PWD##*/} sh`进入`Scrapy`环境（退出容器请按键`CTRL + d`）：
 ```
     scrapy startproject crawl /srv/crawl  #初始化爬虫    
