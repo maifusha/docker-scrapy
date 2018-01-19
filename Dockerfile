@@ -13,7 +13,7 @@ RUN apk add --no-cache \
               mariadb-dev
              
 RUN pip install --no-cache-dir \
-                    Scrapy==1.3.0 \
+                    Scrapy==1.3.3 \
                     scrapy-jsonrpc==0.3.0 \
                     SQLAlchemy==1.1.9 \
                     MySQL-python==1.2.5
