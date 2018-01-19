@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir \
 
 WORKDIR /srv/crawl
 
-CMD ["tail" "-f" "/dev/stderr"]
+CMD ["tail", "-f", "/dev/stderr"]
