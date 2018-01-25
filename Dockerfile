@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir \
                     SQLAlchemy==1.1.9 \
                     MySQL-python==1.2.5
 
-ENV TZ Asia/Shanghai
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 WORKDIR /srv/crawl
 
