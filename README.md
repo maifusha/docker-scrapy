@@ -1,13 +1,16 @@
 > Docker image for Scrapy
 
-[![build status](https://git.maifusha.com/docker/scrapy/badges/master/build.svg)](https://git.maifusha.com/docker/scrapy/commits/master)
+#### Badages
+```
+[![build status](https://git.yoursite.com/docker/scrapy/badges/master/build.svg)](https://git.yoursite.com/docker/scrapy/commits/master)
+```
 
 #### 关于本镜像
 * 集成Scrapy==1.3.0
 * 集成SQLAlchemy==1.1.9
 
 #### 爬虫项目操作
-1. 执行`docker run -d -v .:/srv/crawl --name=${PWD##*/} git.maifusha.com:5005/docker/scrapy:latest`启动`Scrapy`容器环境（容器将以当前目录为名）
+1. 执行`docker run -d -v .:/srv/crawl --name=${PWD##*/} git.yoursite.com:5005/docker/scrapy:latest`启动`Scrapy`容器环境（容器将以当前目录为名）
 2. 爬虫项目首次启动需要初始化构建项目结构`docker exec ${PWD##*/} scrapy startproject crawl /srv/crawl`
 3. 执行`docker exec -it ${PWD##*/} sh`进入`Scrapy`环境（退出容器请按键`CTRL + d`）：
 ```bash
