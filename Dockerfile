@@ -3,6 +3,7 @@ FROM git.maifusha.com:5005/docker/python:latest
 MAINTAINER LiXin "1045909037@qq.com"
 
 RUN apk add --no-cache \
+              tzdata \
               gcc \
               libffi-dev \
               libxml2-dev \
@@ -17,6 +18,8 @@ RUN pip install --no-cache-dir \
                     scrapy-jsonrpc==0.3.0 \
                     SQLAlchemy==1.1.9 \
                     MySQL-python==1.2.5
+
+ENV TZ Asia/Shanghai
 
 WORKDIR /srv/crawl
 
